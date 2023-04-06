@@ -1,167 +1,90 @@
-:root {
-    --color-beige: #061836;
-    --color-font-black: #f0eded;
-    --color-font-light-black: #eeebeb;
-    --color-font-green: #669900;
-    --temp-border: solid 0px black;
-    --font-family: normal Avenir, Arial, georgia;
-}
-
 * {
+    font-family: 'Noto Sans KR', sans-serif;
     margin: 0;
-
-    padding: 0;
-    color: var(--color-font-black);
-    font-family: var(--font-family);
+    padding: 0; /*브라우저별로 기본값으로 적용된 margin과 padding을 초기화*/
+    box-sizing: border-box;
 }
 
-header {
-    border-top: solid 2px black;
-    background: var(--color-beige);
+.nav-bar{
+    width: 100%;
+    background-color: #001A38;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.16);
     position: fixed;
     top: 0;
-    width: 100%;
+    left: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
-
+    z-index: 1; /*nav-bar를 전면으로 꺼내 다른 요소 뒤로 들어가 가려지는 것 방지*/
 }
 
-header .head-wrap .head-wrap-inner .search-btn {
-    position: absolute;
-    top: 10px;
-    right: 40px;
-    background: white;
-    border: solid 1px gray;
-    border-radius: 5px;
-    width: 34px;
-    height: 34px;
+
+.login-box{
+    width: 100%;
+    background-color: #003875;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    display: flex;
+    justify-content: center;
 }
 
-header .head-wrap .head-wrap-inner .search-btn img {
-    position: absolute;
-    top: 7px;
-    left: 7px;
-}
-
-header .head-wrap {
-
-    border: var(--temp-border);
-    height: 120px;
+.button-area{
     width: 1100px;
-
-}
-
-header .head-wrap .head-wrap-inner {
-    height: 120px;
-    width: 1100px;
-    position: relative;
-    border: var(--temp-border);
-}
-
-header .head-wrap .head-wrap-inner .head-logo {
-    position: absolute;
-    top: 20px;
-    width: 75px;
-    height: 75px;
-}
-
-header .head-wrap .head-wrap-inner .head-menu-top-nav {
-    position: absolute;
-    left: 552px;
-    top: 21px;
-
-
-
-}
-
-header .head-wrap .head-wrap-inner .head-menu-top-nav ul {
-    list-style: none;
-}
-
-header .head-wrap .head-wrap-inner .head-menu-top-nav ul li {
-    float: left;
-    color: var(--color-font-light-black);
-    font-size: 13px;
-    text-align: center;
-    height: 20px;
-
-    border: var(--temp-border);
-
-}
-
-header .head-wrap .head-wrap-inner .head-menu-top-nav ul li a {
-    text-decoration: none;
-}
-
-header .head-wrap .head-wrap-inner .head-menu-top-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-header .head-wrap .head-wrap-inner .head-menu-top-nav ul .top-nav01 {
-    width: 76px;
-}
-
-header .head-wrap .head-wrap-inner .head-menu-top-nav ul .top-nav02 {
-    width: 106px;
-}
-
-header .head-wrap .head-wrap-inner .head-menu-top-nav ul .top-nav03 {
-
-    width: 181px;
-}
-
-header .head-wrap .head-wrap-inner .head-menu-top-nav ul .top-nav04 {
-
-    width: 97px;
-}
-
-header .head-wrap-sub {
-    position: absolute;
-    top: 60px;
-    width: 1100px;
-    height: 66px;
-    border: var(--temp-border);
-}
-
-header .head-wrap-sub {
     display: flex;
     justify-content: flex-end;
-
-
 }
 
-header .head-wrap-sub ul {
-    list-style: none;
-    width: 737px;
+
+.lng-select{
+    box-sizing: border-box;
+    width: 100px;
+    height: 30px;
+    background-color: #001A38;
+    color: white;
+    border-radius: 4px;
+    text-align-last: center;
+    text-align: center;
+    border: none;
+    appearance: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.button-area > button{
+    box-sizing: border-box;
+    width: 82px;
+    height: 30px;
+    background-color: #3076D6;
+    color: white;
+    border-radius: 4px;
+    padding: auto;
+    margin-left: 5px;
+    border: none;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+
+.menu-area{
+    width: 1100px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
     display: flex;
     justify-content: space-between;
-
-    border: var(--temp-border);
-
 }
 
-header .head-wrap-sub ul li {
-    text-align: center;
-    flex: auto;
-
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 680px;
 }
 
-header .head-wrap-sub ul li a {
-    text-decoration: none;
-    display: block;
-
-    border: var(--temp-border);
-    text-transform: uppercase;
-    font-size: 13px;
-    padding-top: 10px;
-    height: 66px;
-}
-
-header .head-wrap-sub ul li a:hover {
-    text-decoration: underline;
-    background-color: #2a292c;
-    color: var(--color-font-green);
+.menu > p{
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
 }
 
 .logo{
